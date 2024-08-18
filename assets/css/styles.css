@@ -1,0 +1,240 @@
+/* Estilos generales */
+body {
+    visibility: hidden;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+    transition: background 0.5s;
+}
+
+/* Estilos para el tema claro */
+body.light-mode {
+    background: linear-gradient(135deg, #dff9fb, #ffffff);
+}
+
+/* Estilos para el tema oscuro */
+body.dark-mode {
+    background: linear-gradient(135deg, #2c3e50, #34495e);
+}
+
+/* Estilos de la calculadora */
+.calculator {
+    background: #2c3e50;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    max-width: 100%;
+    width: 100%;
+    max-width: 350px;
+    transition: background 0.5s;
+    box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
+}
+
+/* Tema claro para la calculadora */
+body.light-mode .calculator {
+    background: #ecf0f1;
+}
+
+/* Tema oscuro para la calculadora */
+body.dark-mode .calculator {
+    background: #2c3e50;
+}
+
+/* Estilo del título */
+.title {
+    color: #fff;
+    text-align: center;
+    margin-bottom: 10px;
+    transition: color 0.5s;
+}
+
+/* Tema claro para el título */
+body.light-mode .title {
+    color: #2c3e50;
+}
+
+/* Tema oscuro para el título */
+body.dark-mode .title {
+    color: #ecf0f1;
+}
+
+/* Estilos de la pantalla de la calculadora */
+.calculator-screen {
+    background: #000;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    padding: 15px;
+    box-shadow: inset 0px 4px 8px rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    overflow: hidden;
+    width: 100%;
+    box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
+}
+
+/* Contenedor para el texto de la pantalla */
+.screen-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    overflow: hidden;
+}
+
+/* Estilo del div que simula la pantalla */
+.calculator-screen div {
+    background: #000;
+    color: #32cd32;
+    font-size: 1.3em; /* Tamaño de la fuente ajustable */
+    font-weight: bold;
+    text-align: right;
+    box-shadow: inset 0px 4px 8px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: auto;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+/* Tema claro para la pantalla */
+body.light-mode .calculator-screen div {
+    background: #fff;
+    color: #2c3e50;
+}
+
+/* Tema oscuro para la pantalla */
+body.dark-mode .calculator-screen div {
+    background: #2c3e50;
+    color: #ecf0f1;
+}
+
+/* Estilos de los botones */
+.calculator-buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+/* Botones */
+.btn {
+    background: #34495e;
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 1.5em;
+    padding: 15px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s, transform 0.1s;
+    box-sizing: border-box; /* Asegura que el padding no afecte el tamaño total */
+}
+
+.btn:hover {
+    background: #3c6382;
+    transform: translateY(-2px);
+}
+
+/* Botón igual en azul */
+.btn-equal {
+    background: #2980b9;
+    grid-row: span 2;
+    color: #fff;
+}
+
+/* Botón C en rojo */
+.btn-clear {
+    background: #e74c3c;
+    color: #fff;
+}
+
+/* Botón de retroceso en amarillo */
+.btn-delete {
+    background: #f39c12;
+    color: #fff;
+}
+
+/* Botón 0 que ocupa dos espacios */
+.btn-zero {
+    grid-column: span 2;
+}
+
+/* Tema claro para los botones */
+body.light-mode .btn {
+    background: #bdc3c7;
+    color: #2c3e50;
+}
+
+/* Tema oscuro para los botones */
+body.dark-mode .btn {
+    background: #7f8c8d;
+    color: #ecf0f1;
+}
+
+/* Tema claro para el botón igual */
+body.light-mode .btn-equal {
+    background: #3498db;
+}
+
+/* Tema oscuro para el botón igual */
+body.dark-mode .btn-equal {
+    background: #2980b9;
+}
+
+/* Tema claro para el botón C */
+body.light-mode .btn-clear {
+    background: #e74c3c;
+}
+
+/* Tema oscuro para el botón C */
+body.dark-mode .btn-clear {
+    background: #c0392b;
+}
+
+/* Tema claro para el botón de retroceso */
+body.light-mode .btn-delete {
+    background: #f39c12;
+}
+
+/* Tema oscuro para el botón de retroceso */
+body.dark-mode .btn-delete {
+    background: #f1c40f;
+}
+
+/* Estilos del botón para cambiar de tema */
+.theme-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+#themeToggle {
+    background: #2c3e50;
+    border: none;
+    padding: 10px 20px;
+    color: #fff;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background 0.3s;
+}
+
+#themeToggle:hover {
+    background: #34495e;
+}
+
+/* Tema claro para el botón de cambio de tema */
+body.light-mode #themeToggle {
+    background: #bdc3c7;
+    color: #2c3e50;
+}
+
+/* Tema oscuro para el botón de cambio de tema */
+body.dark-mode #themeToggle {
+    background: #7f8c8d;
+    color: #ecf0f1;
+}
